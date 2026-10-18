@@ -1,0 +1,738 @@
+
+/* ===== GOOGLE FONTS ===== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap');
+
+/* ===== GENERAL STYLE ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #F8F6FF;
+    color: #40365F;
+    line-height: 1.7;
+}
+
+h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+::selection {
+    background-color: #D8CBFF;
+    color: #40365F;
+}
+
+a:focus-visible {
+    outline: 3px solid #8B75C7;
+    outline-offset: 3px;
+}
+
+/* ===== NAVBAR ===== */
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+
+    padding: 18px 7%;
+    background-color: #40365F;
+    box-shadow: 0 2px 14px rgba(64, 54, 95, 0.18);
+}
+
+.logo {
+    color: #FFFFFF;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.navbar nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.navbar nav a {
+    color: #E8E0FA;
+    font-size: 0.85rem;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.navbar nav a:hover,
+.navbar nav a.active {
+    color: #FFFFFF;
+    border-bottom-color: #D8CBFF; 
+}
+
+/* ===== HERO SECTION ===== */
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+    padding: 75px 7%;
+    background: linear-gradient(135deg, #F8F6FF 0%, #EDE7FB 100%);
+}
+
+.hero-content {
+    max-width: 550px;
+}
+
+.eyebrow {
+    margin-bottom: 14px;
+    color: #6E59A9;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.hero h1 {
+    margin-bottom: 22px;
+    font-size: 3.2rem;
+    line-height: 1.2;
+}
+
+.hero-description {
+    margin-bottom: 30px;
+    color: #716987;
+    font-size: 1rem;
+}
+
+  .hero-button,
+  .btn-primary {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 8px;
+
+    background-color: #6E59A9;
+    color: #FFFFFF;
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    transition: background-color 0.3s ease;
+}
+
+  .hero-button:hover,
+  .btn-primary:hover {
+    background-color: #5B4894;
+}
+
+/* Hero Image */
+.hero-image {
+    padding: 14px;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    box-shadow: 0 18px 40px rgba(64, 54, 95, 0.12);
+}
+
+.hero-image img {
+    display: block;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 18px;
+}
+
+/* ===== WELCOME SECTION ===== */
+.welcome {
+    padding: 65px 20px;
+    background-color: #EDE7FB;
+    text-align: center;
+}
+
+.welcome h2,
+.features h2 {
+    margin-bottom: 18px;
+    font-size: 2.2rem;
+}
+
+.welcome > p:last-child {
+    max-width: 700px;
+    margin: 0 auto;
+    color: #716987;
+}
+
+/* ===== FEATURE CARDS ===== */
+.features {
+    padding: 75px 7%;
+    text-align: center;
+}
+
+.features h2 {
+    margin-bottom: 35px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    counter-reset: fitur;
+}
+
+.feature-card {
+    padding: 30px 25px;
+    background-color: #FFFFFF;
+    border: 1px solid #E8E0FA;
+    border-radius: 16px;
+    text-align: left;
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(64, 54, 95, 0.08);
+}
+
+.feature-card::before {
+    counter-increment: fitur;
+    content: "0" counter(fitur);
+    display: block;
+    margin-bottom: 12px;
+    color: #8B75C7;
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.feature-card h3 {
+    margin-bottom: 12px;
+    font-size: 1.4rem;
+}
+
+.feature-card p {
+    margin-bottom: 20px;
+    color: #716987;
+    font-size: 0.9rem;
+}
+
+.feature-card a {
+    color: #7862B4;
+    font-size: 0.9rem;
+    font-weight: 700;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    padding: 25px 20px;
+    background-color: #40365F;
+    color: #E8E0FA;
+    font-size: 0.85rem;
+    text-align: center;
+}
+
+footer p:last-child {
+    margin-top: 4px;
+    font-size: 0.78rem;
+    opacity: 0.7;
+}
+
+/* ===== PHONE RESPONSIVE ===== */
+@media (max-width: 600px) {
+
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        gap: 12px;
+        padding: 16px 12px;
+    }
+
+    .logo {
+        font-size: 1.45rem;
+    }
+
+    .navbar nav {
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 10px 16px;
+    }
+
+    .navbar nav a {
+        font-size: 0.75rem;
+    }
+
+    /* Hero */
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 45px 22px;
+    }
+
+    .hero h1 {
+        font-size: 2.4rem;
+    }
+
+    .hero-image img {
+        height: 260px;
+    }
+
+    /* Welcome */
+    .welcome {
+        padding: 45px 22px;
+    }
+
+    .welcome h2,
+    .features h2 {
+        font-size: 1.8rem;
+    }
+
+    /* Feature cards */
+    .features {
+        padding: 50px 22px;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .feature-card {
+        padding: 25px;
+    }
+}
+
+/* ===== STUDY TIPS PAGE ===== */
+
+.content-page {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 60px 30px;
+}
+
+.page-heading {
+    max-width: 750px;
+    margin: 0 auto 45px;
+    text-align: center;
+}
+
+.page-heading h1 {
+    margin-bottom: 16px;
+    font-size: 2.45rem;
+    line-height: 1.25;
+}
+
+.welcome h2::after,
+.features h2::after,
+.page-heading h1::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 4px;
+    margin: 18px auto 0;
+    background-color: #8B75C7;
+    border-radius: 999px;
+}
+
+.page-heading > p:last-child {
+    color: #716987;
+}
+
+/* Tips Grid */
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.tip-card {
+    overflow: hidden;
+    background-color: #FFFFFF;
+    border: 1px solid #E8E0FA;
+    border-radius: 16px;
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+.tip-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(64, 54, 95, 0.08);
+}
+
+.tip-content {
+    padding: 24px;
+}
+
+.tip-number {
+    color: #8B75C7;
+    font-size: 0.75rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+.tip-content h2 {
+    margin: 10px 0;
+    font-size: 1.4rem;
+}
+
+.tip-content p {
+    color: #716987;
+    font-size: 0.9rem;
+    line-height: 1.8;
+}
+
+/* Decorative placeholders for cards without images */
+
+.tip-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 190px;
+
+    background: linear-gradient(135deg, #E8E0FA, #D8CBFF);
+    color: #6856A8;
+    font-family: 'Playfair Display', serif;
+    font-size: 3rem;
+}
+
+  .tip-card:nth-child(3n+2) .tip-placeholder {
+      background: linear-gradient(135deg, #D8CBFF, #B9A6EE);
+  }
+
+  .tip-card:nth-child(3n+3) .tip-placeholder {
+      background: linear-gradient(135deg, #EDE7FB, #C4B3F2);
+  }
+
+/* Closing Message */
+
+.tips-message {
+    max-width: 1000px;
+    margin: 55px auto 0;
+    padding: 35px;
+    background-color: #EDE7FB;
+    border-radius: 16px;
+    text-align: center;
+}
+
+.tips-message h2 {
+    margin-bottom: 12px;
+    font-size: 1.8rem;
+}
+
+.tips-message p {
+    color: #716987;
+}
+
+/* Phone Layout */
+
+@media (max-width: 600px) {
+    .content-page {
+        padding: 40px 20px;
+    }
+
+    .page-heading {
+        margin-bottom: 30px;
+    }
+
+    .page-heading h1 {
+        font-size: 2rem;
+    }
+
+    .tips-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .tip-placeholder {
+        height: 210px;
+    }
+
+    .tips-message {
+        margin-top: 35px;
+        padding: 25px 20px;
+    }
+}
+
+/* HALAMAN MANAJEMEN WAKTU */
+
+.time-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.time-card {
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 18px;
+    border: 1px solid #EDE7FB;
+    box-shadow: 0 5px 20px rgba(64, 54, 95, 0.06);
+    transition: transform 0.3s ease;
+}
+
+.time-card:hover {
+    transform: translateY(-5px);
+}
+
+.time-icon {
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #EDE7FB;
+    color: #8B75C7;
+    border-radius: 14px;
+    font-weight: 700;
+    margin-bottom: 18px;
+}
+
+.time-card h2 {
+    font-family: 'Playfair Display', serif;
+    color: #40365F;
+    font-size: 22px;
+    margin-bottom: 12px;
+}
+
+.time-card p {
+    color: #716987;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.time-message {
+    max-width: 800px;
+    margin: 60px auto 20px;
+    padding: 40px 25px;
+    background-color: #EDE7FB;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.time-message h2 {
+    font-family: 'Playfair Display', serif;
+    color: #40365F;
+    margin-bottom: 15px;
+}
+
+.time-message p {
+    color: #716987;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* Tampilan HP */
+@media (max-width: 600px) {
+    .time-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+        margin: 30px auto;
+    }
+
+    .time-card {
+        padding: 25px;
+    }
+
+    .time-message {
+        margin-top: 40px;
+        padding: 30px 20px;
+    }
+}
+
+/* HALAMAN TENTANG KAMI */
+
+.about-section {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.about-content h2,
+.about-values h2,
+.about-message h2 {
+    font-family: 'Playfair Display', serif;
+    color: #40365F;
+    margin-bottom: 18px;
+}
+
+.about-content p {
+    color: #716987;
+    line-height: 1.9;
+    margin-bottom: 15px;
+}
+
+.about-illustration {
+    background-color: #EDE7FB;
+    border-radius: 24px;
+    padding: 45px 25px;
+    text-align: center;
+}
+
+.about-illustration h3 {
+    font-family: 'Playfair Display', serif;
+    color: #40365F;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.about-illustration p {
+    color: #716987;
+    line-height: 1.7;
+}
+
+.about-values {
+    max-width: 1000px;
+    margin: 70px auto;
+    text-align: center;
+}
+
+.about-values h2 {
+    margin-bottom: 30px;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    text-align: left;
+}
+
+.value-card {
+    background-color: #FFFFFF;
+    border: 1px solid #EDE7FB;
+    border-radius: 18px;
+    padding: 25px;
+    box-shadow: 0 5px 20px rgba(64, 54, 95, 0.05);
+}
+
+.value-card h3 {
+    font-family: 'Playfair Display', serif;
+    color: #40365F;
+    margin-bottom: 12px;
+}
+
+.value-card p {
+    color: #716987;
+    line-height: 1.8;
+    font-size: 14px;
+}
+
+.about-message {
+    max-width: 800px;
+    margin: 50px auto 20px;
+    padding: 40px 25px;
+    background-color: #EDE7FB;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.about-message p {
+    color: #716987;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+/* Tampilan HP */
+@media (max-width: 600px) {
+    .about-section {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        margin: 35px auto;
+    }
+
+    .about-illustration {
+        padding: 35px 20px;
+    }
+
+    .about-values {
+        margin: 45px auto;
+    }
+
+    .values-grid {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .about-message {
+        margin-top: 35px;
+        padding: 30px 20px;
+    }
+}
+
+/* GAMBAR MANAJEMEN WAKTU */
+
+.time-banner {
+    max-width: 1000px;
+    height: 280px;
+    margin: 35px auto;
+    overflow: hidden;
+    border-radius: 22px;
+}
+
+.time-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+@media (max-width: 600px) {
+    .time-banner {
+        height: 190px;
+        margin: 25px auto;
+    }
+}
+
+/* GAMBAR TENTANG KAMI */
+
+.about-illustration img {
+    width: 100%;
+    height: 210px;
+    object-fit: cover;
+    display: block;
+    border-radius: 16px;
+    margin-bottom: 22px;
+}
+
+@media (max-width: 600px) {
+    .about-illustration img {
+        height: 190px;
+    }
+}
+
+@media (min-width: 601px) and (max-width: 900px) {
+    .hero {
+        grid-template-columns: 1fr;
+        padding: 55px 7%;
+    }
+
+    .hero-content {
+        max-width: none;
+    }
+
+    .feature-grid,
+    .values-grid,
+    .tips-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .about-section {
+        grid-template-columns: 1fr;
+    }
+}
